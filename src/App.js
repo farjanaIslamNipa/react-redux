@@ -1,7 +1,8 @@
 import { createContext, useState } from 'react';
 import './App.css';
+import BigForm from './BigForm';
 import Parent from './Parent';
-import ShortForm from './ShortForm';
+// import ShortForm from './ShortForm';
 
 export const COUNTER_CONTEXT = createContext()
 function App() {
@@ -11,8 +12,9 @@ function App() {
   return (
     <COUNTER_CONTEXT.Provider value={value}>    
       <div>
-        <Parent />
-        <ShortForm />
+        {/* <Parent /> */}
+        {/* <ShortForm /> */}
+        <BigForm />
       </div>
     </COUNTER_CONTEXT.Provider>
   );
