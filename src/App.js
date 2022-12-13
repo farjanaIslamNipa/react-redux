@@ -1,22 +1,16 @@
-import { createContext, useState } from 'react';
+
 import './App.css';
-import BigForm from './BigForm';
-import Parent from './Parent';
+import Main from './layouts/Main';
+
 // import ShortForm from './ShortForm';
 
-export const COUNTER_CONTEXT = createContext()
-function App() {
-  const [count, setCount] = useState(0);
 
-  const value = {count, setCount}
+function App() {
+
   return (
-    <COUNTER_CONTEXT.Provider value={value}>    
-      <div>
-        {/* <Parent /> */}
-        {/* <ShortForm /> */}
-        <BigForm />
-      </div>
-    </COUNTER_CONTEXT.Provider>
+    <div>
+      <Main />
+    </div>
   );
 }
 
