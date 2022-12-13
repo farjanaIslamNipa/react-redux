@@ -6,7 +6,7 @@ import Cart from "../pages/Cart";
 import Home from "../pages/Home";
 import TopRated from "../pages/TopRated";
 
-export default createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
