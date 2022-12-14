@@ -1,6 +1,7 @@
-
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import Main from './layouts/Main';
+import ProductProvider from './context/ProductProvider.js';
+import { router } from './routes/router.js';
 
 // import ShortForm from './ShortForm';
 
@@ -9,7 +10,9 @@ function App() {
 
   return (
     <div>
-      <Main />
+      <ProductProvider>
+        <RouterProvider router={router} />
+      </ProductProvider>
     </div>
   );
 }
