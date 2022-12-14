@@ -19,7 +19,7 @@ const Home = () => {
     content = <p>Nothing to show. Product list is empty</p>
   }
   if(!error && !loading && products.length){
-    content = products.map(prod => <ProductCard product={prod} key={prod._id} />)
+    content = products.map((prod, index) => <ProductCard product={prod} key={index} />)
   }
 
   return (
