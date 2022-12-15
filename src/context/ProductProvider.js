@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useReducer, useState } from 'react';
+import React, { createContext, useContext, useEffect, useReducer } from 'react';
 import { actionTypes } from '../state/productState/actionTypes';
 import { initialState, productReducer } from '../state/productState/productReducer';
 
@@ -6,7 +6,7 @@ const PRODUCT_CONTEXT = createContext();
 
 const ProductProvider = ({children}) => {
   const [state, dispatch] = useReducer(productReducer, initialState)
-console.log(state, 'data');
+// console.log(state, 'data');
   useEffect(()=>{
     dispatch({type: actionTypes.FETCHING_STARTS})
     fetch('/product.json')

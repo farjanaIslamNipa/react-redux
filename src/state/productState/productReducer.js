@@ -33,6 +33,11 @@ export const productReducer = (state, action) => {
         ...state,
         cart:[...state.cart, action.payload]
       };
+    case actionTypes.REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart:[...state.cart, state.cart.filter(pd => pd.id !== action.payload)]
+      };
 
       default: return state
   }

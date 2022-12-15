@@ -14,10 +14,11 @@ const ProductCard = ({ product }) => {
         <h6 className="text-center">Rating:<span className='text-danger ps-2'>{product.rating}</span></h6>
         <ul>
           {
-            product.keyFeature.map(feature => <li className='mb-2' style={{listStyle:'none'}}>{feature}</li>)
+            product.keyFeature.map((feature, index) => <li className='mb-2' style={{listStyle:'none'}} key={index}>{feature}</li>)
           }
         </ul>
-        <button onClick={() => dispatch({type: actionTypes.ADD_TO_CART, payload: product})} className='btn btn-info rounded-pill w-100 text-white fw-bold'>Add to cart</button>
+        <button onClick={() => dispatch({type: actionTypes.ADD_TO_CART, payload: product})} className='btn btn-info rounded-pill w-100 text-white fw-bold mb-3'>Add to cart</button>
+        <button onClick={() => dispatch({type: actionTypes.REMOVE_FROM_CART, payload: product.id})} className='btn btn-danger rounded-pill w-100 text-white fw-bold'>Remove from cart</button>
       </div>
     </div>
   );
